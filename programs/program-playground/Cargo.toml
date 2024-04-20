@@ -1,0 +1,23 @@
+[package]
+name = "program-playground"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "program_playground"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "=0.30.0"
+solana-program = "=1.17.13"
+ahash = "=0.8.6"
+bumpalo = "=3.14.0"
+logos = { git = "https://github.com/ZeusNetworkHQ/logos", branch = "feature/anchor", features = ["anchor"] }
